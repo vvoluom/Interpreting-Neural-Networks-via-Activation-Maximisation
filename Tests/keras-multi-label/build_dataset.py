@@ -37,18 +37,18 @@ for (dType, imagePaths, outputPath) in datasets:
 	# loop over all input images
 	for imagePath in imagePaths:
 		# load the input image and resize it to 64x64 pixels
-		#image = cv2.imread(imagePath)
-		#image = cv2.resize(image, (64, 64))
+		image = cv2.imread(imagePath)
+		image = cv2.resize(image, (64, 64))
 
 		# create a flattened list of pixel values
-		#image = [str(x) for x in image.flatten()]
+		image = [str(x) for x in image.flatten()]
 
 		# extract the class label from the file path and write the
 		# label along pixels list to disk
 		label = imagePath.split(os.path.sep)[-2].split("_")
 		label = label[0]+','+label[1]
 		#print (label)
-		f.write("{},{}\n".format(label, imagePath))
+		f.write("{},{}\n".format(label, ",".join(image)))
 
 	# close the output CSV file
 	f.close()

@@ -71,11 +71,12 @@ def csv_image_generator(inputPath, bs, mlb, mode="train", aug=None):
 			label = line[1]
 			label = [line[0],line[1]]
 			#print(label)
-			image = cv2.imread(line[2])
+			#image = cv2.imread(line[2])
+			#image = cv2.resize(image, (IMAGE_DIMS[1], IMAGE_DIMS[0]))
+			image = np.array([int(x) for x in line[2:]], dtype="uint8")
+			image = image.reshape((64, 64, 3))
 			image = cv2.resize(image, (IMAGE_DIMS[1], IMAGE_DIMS[0]))
-			#image = np.array([int(x) for x in line[2:]], dtype="uint8")
-			#image = image.reshape((64, 64, 3))
-			image = cv2.resize(image, (IMAGE_DIMS[1], IMAGE_DIMS[0]))
+			#image = cv2.resize(image, (IMAGE_DIMS[1], IMAGE_DIMS[0]))
 			image = img_to_array(image)
 			# update our corresponding batches lists
 			images.append(image)
@@ -109,9 +110,9 @@ TRAIN_CSV = "flowers17_training.csv"
 TEST_CSV = "flowers17_testing.csv"
 
 # initialize the number of epochs to train for and batch size
-NUM_EPOCHS = 75
-EPOCHS = 75
-BS = 10
+NUM_EPOCHS = 20
+EPOCHS = 20
+BS = 32
 INIT_LR = 1e-3
 # initialize the total number of training and testing image
 NUM_TRAIN_IMAGES = 0
