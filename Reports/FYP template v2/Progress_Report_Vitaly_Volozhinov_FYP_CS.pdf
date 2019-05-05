@@ -1,0 +1,6 @@
+\documentclass{csfyp}
+\title{Interpreting Neural Networks via activation maximization}
+\author{John Smith}
+\supervisor{Johnny Smithy and Jon Smythe}
+\date{May 2014}
+\acknowledgement{The research work disclosed in this publication is partially funded by the ABCDEF Scholarship Scheme. \emph{Include this only if you are required to acknowledge funding or support, and not to acknowledge the support of Muxxu the hamster.}}

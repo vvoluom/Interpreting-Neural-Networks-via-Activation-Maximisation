@@ -1,0 +1,19 @@
+@article{paper1,
+   author    = {Johns Mith},
+   title     = {The Psychology of Following References in Papers},
+   journal   = {BDN Computing Surveys},
+   year      = {1996},
+   volume    = {28},
+   number    = {4},
+   pages     = {196--199},
+   publisher = {BDN}
+}
+
+@book{paper2,
+   author    = {Jo N. Smeete},
+   title     = {Bibliographies I Have Known},
+   publisher = {Ringer Publishers},
+   isbn      = {867-2-531-18728-3},
+   year      = {2007}
+}
+
