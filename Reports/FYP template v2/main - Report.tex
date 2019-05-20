@@ -211,7 +211,7 @@ F1(TP_j,FP_j,TN_j,FN_j) = \frac{(1+B^2)*TP_j}{((1+B^2)*TP_j+B^2*FN_j+FP_j)}
 Recall is described as the intersection of the relevant labels and retrieved labels over the total number of relevant labels. Precision is described as the intersection of the relevant labels and retrieved labels over the total number of retrieved labels. F1-Score is the harmonic average between precision and recall. These metrics are important for the evaluation of MLC models in this dissertation as standard SLC metrics aren't viable.
 
 \subsection{Activation Maximization}
-Once the spatial relations are trained and test activation maximisation will be used to break down the layers of the CNN and see the inner workings of how the trained neural network is making such decisions. Activation maximisation works by maximising the activation of certain neurons so that we can see the layers of the CNN more clearly to understand what the trained weights are looking for in the input image . This is an easier and useful way of visualizing the layers of the CNN for human understanding . 
+Once the spatial relations are trained and tested, Activation Maximisation will be used to maximize the outputs of all classes for all the Convolutional Neural Network models. Activation maximisation works by maximising the activation of certain class so that we can see a representation of what the CNN is looking for when classifying a class. This is an easy and useful way of visualizing the final outputs of the CNN for human understanding . 
 
 
 \section{Methodology}
@@ -280,16 +280,13 @@ Since this method doesn’t use any of the actual objects but only their boundin
 
 
 \subsection{Training}
-Two different CNN architectures are trained for comparison. The first is a Fine-Tuned VGG16 with ImageNet weights. The other is a smaller version of the VGG16 architecture with 7 Convolutional Layers instead, dubbed Small VGG with no trained parameters. A Feed Forward Neural Network was trained on the geometric features.
+A Fine-Tuned VGG16 with ImageNet weights is trained on the datasets and evaluated. A Feed Forward Neural Network was trained on the geometric features exctracted from the bounding boxes of the datasets.
 
 \subsubsection{VGG16}
 The process of Fine-Tuning the VGG16 model started by first loading the model with all its layers and weights. The last Dense layer was replaced with a new Dense layer with a specified amount of classes and activation function that is set before training according to the problem. The MLC problem would use the loss function of binary-crossentropy  and an activation function of Sigmoid while the SLC problem would use the categorical-crossentropy loss function and an activation function of Softmax. All the layers had been set to non-trainable except for the last dense and fully connected layers. Using the optimizer stochastic gradient descent(SGD) with a learning of 0.001 and a Nesterov momentum of 0.9 the model was run for 5 Epochs for the VRD dataset and 15 Epochs for SpatialVoc2k dataset. Once the model finished training it was saved and a new model was created with all the layers set to non-trainable except that of the fully connected layers and the last convolutional block (Conv Block 5). The previous models weights had been loaded into the new model and again run for 5 Epochs for the VRD dataset and 15 Epochs for SpatialVoc2k dataset. Finally the last step was repeated but with a learning rate of 0.00001 for 5 Epochs for the VRD dataset and 15 Epochs for SpatialVoc2k dataset. This was done 10 times for both datasets.
 
-\subsubsection{Small VGG}
-The Small VGG model was created and trained for 10 Epochs for the VRD dataset and 20 Epochs for SpatialVoc2k dataset, using the optimizer SGD with a learning of  0.001 and Nesterov momentum of 0.9. The same parameters were applied to it with regards to MLC and SLC problems. This was done 10 times for both datasets.
-
 \subsubsection{Feed Forward Neural Network}
-A Feed Forward Neural Network was trained on the Geometric Features created from the datasets. The network had been made up out of two Densly connected layers and a dense output layer containing the number of output classes with an activation function according to the problem. The same parameters were applied to it with regards to MLC and SLC problems. The optimizer ADAM was used with default values and was trained for 5 Epochs. This was done 10 times for both datasets.
+A Feed Forward Neural Network was trained on the Geometric Features created from the datasets. The network had been made up out of two Densly connected layers (256 neurons followed by 128 neurons) and a densly connected output layer containing the number of output classes with an activation function according to the problem being solved. The same parameters were applied to it with regards to MLC and SLC problems. The optimizer ADAM was used with default values and was trained for 10 Epochs. This was done 10 times for both datasets and their results recorded.
 
 \subsubsection{Data Generators}
 Due to having a large data set custom Image generators had been used to load the image meta data and create the images. The batch size for the image generators and CNN had been set to 32. Once a batch of images had been created their pixel intensities had been rescaled to be between 0 and 1, this enables for faster and more precise training of CNN’s.
@@ -308,67 +305,245 @@ Once the model had been fully trained an Image Generator had been loaded in with
 Once predictions have been made on the testing data and values recorded, the evaluation metrics taken from "A Review on Multi-Label Learning Algorithms" mentioned above were run and recorded. These metrics are used to evaluate MLC models. To evaluate SLC models Recall@1,Precision@1 and F1-Score@1 had been utelized. Since @1 is used it means that the highest probability value is used for the metric therefore the predictions were first ranked in descending order by probability and the highest predicted class is compared to the ground truth value. The results are recorded per class together with the Micro/Macro averages. All 10 models for each problem had been evaluated and their averages been tabulated.
 
 \subsection{Interpreting the models}
-To interpret the models via activation maximization the trained models are first loaded in, then the last activation function of the fully connected prediction layer was chosen and replaced by a linear activation. Activation maximization was then initialized on a random input image and run for 1024 back propagation iterations maximizing the output for each class. The resulting images were then saved and compared for each model.
+To interpret the models via activation maximization the trained models are first loaded in, then the last activation function of the fully connected prediction layer was chosen and replaced by a linear activation. Activation maximization was then initialized on a random input image and run for 1024 back propagation iterations maximizing the output for each class. The resulting images were then saved and compared for each model. It was made sure that the input range was set to between 0 and 1 as that is scale the CNN's had been trained on.
 
 \section{Findings}
 \subsection{Preamble}
-In this chapter the results achieved from various models trained in Chapter 3 are presented.
+In this chapter the results achieved from various models trained in Chapter 3 are presented. Every dataset shows the results achieved on the test data for both the VGG16 and Feed Forward Neural Network together MLC vs SLC training methods.
 
-\subsubsection{VRD Dataset Evaluation Results}
+\subsection{VRD Dataset Evaluation Results}
 In this section the results evaluated from all the models trained on the VRD dataset are presented.
 
 \subsubsection{VGG16 Evaluation Results}
-This section shows the relevant results obtained by models for both MLC and SLC problems.
+This section shows the relevant results obtained by models for both MLC and SLC problems.The presented results are rounded to 2 decimal places.
+
 \begin{table}[!htbp]
 \centering
-\begin{tabular}{|l|l|l|l|l}
-\cline{1-4}
-Class & MLC Precision & MLC Recall & MLC F1-Score \\ \cline{1-4}
-above  &	0.579376501633064 &	0.570872481074666 &	0.558409339042934 \\ \cline{1-4}
-behind &	0.476218124665254 &	0.466627743189588 &	0.453527639659715 \\ \cline{1-4}
-below &	0.338704458796433 &	0.334167516145987 &	0.325343217568997\\ \cline{1-4}
-in &	0.693892160607435 &	0.680708087777064 &	0.664990147136294 \\ \cline{1-4}
-left &	0.016666666666667 &	0.01875 &	0.02109375 \\ \cline{1-4}
-next &	0.389775523055801 &	0.383672902034268 &	0.378060586217122 \\ \cline{1-4}
-on &	0.574814415448885 &	0.564402930198218 &	0.552404559211143 \\ \cline{1-4}
-right &	0.1171875 &	0.0693359375 &	0.036336263020833\\ \cline{1-4}
-under &	0.402280491870001 &	0.3994218407789 &	0.390925657832784\\ \cline{1-4}
+\begin{tabular}{|l|l|l|l|l|l|l|l|l}
+\cline{1-7}
+Class   &  MLC  &  MLC  &  MLC & SLC &  SLC & SLC \\ \cline{1-7}
+English & Precision &  Recall   & F1 & Precision@1 & Recall@1 & F1@1 \\ \cline{1-7}
+above	&	0.66	&	0.44	&	0.53	&	0.52	&	0.63	&	0.57 \\ \cline{1-7}
+at	    &	0.00	&	0.00	&	0.00	&	0.11	&	0	&	0 \\ \cline{1-7} 
+behind	&	0.56	&	0.03	&	0.06	&	0.31	&	0.26	&	0.28 \\ \cline{1-7}
+below	&	0.38	&	0.03	&	0.06	&	0.35	&	0.22	&	0.27 \\ \cline{1-7} 
+beside	&	0.00	&	0.00	&	0.00	&	0.03	&	0	    &	0 \\ \cline{1-7} 
+front	&	0.00	&	0.00	&	0.00	&	0.25	&	0.21	&	0.23 \\ \cline{1-7} 
+in	    &	0.79	&	0.48	&	0.59	&	0.65	&	0.55	&	0.6 \\ \cline{1-7} 
+left	&	0.13	&	0.00	&	0.01	&	0.3	    &	0.22	&	0.25 \\ \cline{1-7} 
+near	&	0.00	&	0.00	&	0.00	&	0.19	&	0.03	&	0.05 \\ \cline{1-7} 
+next	&	0.44	&	0.02	&	0.04	&	0.3	    &	0.44	&	0.36 \\ \cline{1-7} 
+on	    &	0.66	&	0.69	&	0.67	&	0.56	&	0.86	&	0.68 \\ \cline{1-7} 
+right	&	0.10	&	0.00	&	0.00	&	0.24	&	0.2	    &	0.22 \\ \cline{1-7} 
+under	&	0.48	&	0.05	&	0.09	&	0.33	&	0.45	&	0.38 \\ \cline{1-7}
 \end{tabular}
-\caption{Fine-Tuned VGG16 on VRD dataset Label Based Metrics}
+\caption{VGG16(VRD) results for MLC and SLC}
+\centering
+\begin{tabular}{|l|l|l|l|l|l|l|l|l}
+\cline{1-7}
+Class &  MLC  &  MLC  &  MLC & SLC &  SLC & SLC \\ \cline{1-7}
+Metric Type  & Precision &  Recall & F1 & Precision@1 & Recall@1 & F1@1 \\ \cline{1-7}
+Macro-Average &	0.26	&	0.11	&	0.13	&	0.26	&	0.26	&	0.24 \\ \cline{1-7}
+Micro-Average &	0.68	&	0.29	&	0.41	&	0.47	&	0.47	&	0.47 \\ \cline{1-7}
+Example       &	0.31	&	0.31	&	0.31  \\ \cline{1-4}
+\end{tabular}
+\caption{Example/Micro/Macro Average Label Based Metrics for VGG16(VRD)}
+The results in Table 2 do not include the following labels:=\{ by, over, top\} as they have achieved a result of 0 for all metrics. These results show the averages of 10 VGG16 models Fine-Tuned using the VRD dataset as MLC and SLC problems. The Example based metric as seen in the MLC problem is not included for the SLC problem as it produces equivalent results to that of the Micro-Average Metric. The results shown for @1 mean only the top 1 predicted labels are compared to the ground truth.
+\vspace{-4mm}
 \end{table}
-The results in Table 2 do not include the following labels:=\{ at, beside, by, front, near, over, top\} as they have achieved a result of 0 for all metrics.
-
-\begin{table}[!htbp]
-\centering
-\begin{tabular}{|l|l|l|l|l}
-\cline{1-4}
-Macro-Average &  0.224307240171471 & 0.217997464918668 &	0.211318197480614 \\ \cline{1-4}
-Micro-Average & 0.597438470798491 &	0.587057612307554 &	0.574165491068433\\ \cline{1-4}
-Example & 0.276187992679944 & 0.271005522147088 & 0.264707157074801\\ \cline{1-4}
-\caption{Fine-Tuned VGG16 on VRD dataset Example and Micro/Macro Average Label Based Metrics}
-\end{tabular}
-
-\subsubsection{SmallVGG Evaluation Results}
+\newpage
 
 \subsubsection{Feed Forward Evaluation Results}
+This section shows the relevant results obtained by the Feed Forward models for both MLC and SLC problems.The presented results are rounded to 2 decimal places.
+
+\begin{table}[!htbp]
+\centering
+\begin{tabular}{|l|l|l|l|l|l|l|l|l}
+\cline{1-7}
+Class &  MLC  &  MLC  &  MLC & SLC &  SLC & SLC \\ \cline{1-7}
+English & Precision &  Recall    & F1 & Precision@1 & Recall@1 & F1@1 \\ \cline{1-7}
+above	&	0.66	&	0.62	&	0.64	&	0.57	&	0.64	&	0.60 \\ \cline{1-7}
+at	    &	0.26	&	0.11	&	0.16	&	0.19	&	0.13	&	0.15 \\ \cline{1-7} 
+behind	&	0.56	&	0.41	&	0.47	&	0.46	&	0.49	&	0.48 \\ \cline{1-7} 
+below	&	0.39	&	0.24	&	0.29	&	0.33	&	0.25	&	0.28 \\ \cline{1-7} 
+beside	&	0.20	&	0.04	&	0.07	&	0.13	&	0.07	&	0.09 \\ \cline{1-7} 
+by 	    &	0.23	&	0.05	&	0.07	&	0.12	&	0.07	&	0.09 \\ \cline{1-7} 
+front	&	0.43	&	0.26	&	0.32	&	0.34	&	0.34	&	0.34 \\ \cline{1-7} 
+in   	&	0.80	&	0.68	&	0.73	&	0.72	&	0.70	&	0.71 \\ \cline{1-7} 
+left	&	0.31	&	0.12	&	0.17	&	0.24	&	0.19	&	0.21 \\ \cline{1-7} 
+near	&	0.22	&	0.07	&	0.10	&	0.17	&	0.13	&	0.15 \\ \cline{1-7}
+next	&	0.35	&	0.21	&	0.26	&	0.29	&	0.32	&	0.30 \\ \cline{1-7} 
+on	    &	0.77	&	0.76	&	0.76	&	0.70	&	0.77	&	0.73 \\ \cline{1-7} 
+over	&	0.30	&	0.09	&	0.14	&	0.24	&	0.11	&	0.15 \\ \cline{1-7} 
+right	&	0.27	&	0.12	&	0.16	&	0.23	&	0.19	&	0.20 \\ \cline{1-7} 
+top	    &	0.18	&	0.03	&	0.06	&	0.12	&	0.05	&	0.06 \\ \cline{1-7} 
+under	&	0.54	&	0.50	&	0.51	&	0.43	&	0.54	&	0.48 \\ \cline{1-7}
+\end{tabular}
+\caption{Feed Forward NN(VRD) results for MLC and SLC}
+\centering
+\begin{tabular}{|l|l|l|l|l|l|l|l|l}
+\cline{1-7}
+Class &  MLC  &  MLC  &  MLC & SLC &  SLC & SLC \\ \cline{1-7}
+Metric Type  & Precision &  Recall & F1 & Precision@1 & Recall@1 & F1@1 \\ \cline{1-7}
+Macro-Average &	0.40	&	0.27	&	0.31	&	0.33	&	0.31	&	0.31 \\ \cline{1-7}
+Micro-Average &	0.63	&	0.47	&	0.54	&	0.51	&	0.51	&	0.51 \\ \cline{1-7}
+Example       &	0.49	&	0.49	&	0.49 \\ \cline{1-4}
+\end{tabular}
+\caption{Example/Micro/Macro Average Label Based Metrics for Feed Forward NN(VRD)}
+These results show the averages of 10 Feed Forward Neural Network models trained using VRD Geometric Features as MLC and SLC problems. The Example based metric as seen in the MLC problem is not included for the SLC problem as it produces equivalent results to that of the Micro-Average Metric. The results shown for @1 mean only the top 1 predicted labels are compared to the ground truth.
+\vspace{-4mm}
+\end{table}
 
 \subsubsection{Activation Maximization Evaluation Results}
 
+\begin{figure}[!htbp]
+	\includegraphics[scale=0.60,center]{VRD_act.pdf}
+	\caption{Activation Maximization on VGG16(VRD) Classes for MLC and SLC}
+\end{figure}
 
-\subsubsection{SpatialVoc2k Dataset Evaluation Results}
+
+\subsection{SpatialVoc2k Dataset Evaluation Results}
 In this section the results evaluated from all the models trained on the SpatialVoc2k dataset are presented.
 
 \subsubsection{VGG16 Evaluation Results}
-
-\subsubsection{SmallVGG Evaluation Results}
+\begin{table}[!htbp]
+\centering
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|l}
+\cline{1-8}
+Class & Class & MLC  &  MLC  &  MLC & SLC &  SLC & SLC \\ \cline{1-8}
+French & English & Precision &  Recall    & F1 & Precision@1 & Recall@1 & F1@1 \\ \cline{1-8}
+a cote de	      &	next to	&	0.67	&	0.52	&	0.58	&	0.27	&	0.20	&	0.23 \\ \cline{1-8}
+a l'exterieur de  &	outside	&	0.00	&	0.00	&	0.00	&	0.03	&	0.01	&	0.01 \\ \cline{1-8}
+au dessus de	  &	beyond	&	0.00	&	0.00	&	0.00	&	0.15	&	0.09	&	0.11 \\ \cline{1-8}
+au niveau de	  &	near/at the level of	&	0.68	&	0.47	&	0.56	&	0.30	&	0.17	&	0.22 \\ \cline{1-8}
+aucun	          &	 none	&	0.00	&	0.00	&	0.00	&	0.10	&	0.02	&	0.03 \\ \cline{1-8} 
+autour de	&	around	&	0.00	&	0.00	&	0.00	&	0.47	&	0.31	&	0.32 \\ \cline{1-8}
+contre	&	against	&	0.51	&	0.14	&	0.21	&	0.22	&	0.16	&	0.18 \\ \cline{1-8}
+dans	&	in/into	&	0.00	&	0.00	&	0.00	&	0.37	&	0.28	&	0.30 \\ \cline{1-8}
+derriere	&	behind	&	0.63	&	0.42	&	0.50	&	0.28	&	0.34	&	0.30 \\ \cline{1-8}
+devant	&	front/before	&	0.64	&	0.46	&	0.53	&	0.30	&	0.34	&	0.32 \\ \cline{1-8} 
+en face de	&	across from	&	0.00	&	0.00	&	0.00	&	0.07	&	0.02	&	0.03 \\ \cline{1-8} 
+loin de	&	far from	&	0.70	&	0.25	&	0.36	&	0.37	&	0.30	&	0.33 \\ \cline{1-8}
+pres de	&	near/by	&	0.75	&	0.72	&	0.73	&	0.32	&	0.44	&	0.37 \\ \cline{1-8}
+sous	&	under/below	&	0.64	&	0.41	&	0.50	&	0.34	&	0.48	&	0.40 \\ \cline{1-8}
+sur	&	on	&	0.67	&	0.45	&	0.53	&	0.36	&	0.46	&	0.40 \\ \cline{1-8}
+\end{tabular}
+\caption{VGG16(SpatialVoc2k) results for MLC and SLC}
+\centering
+\begin{tabular}{|l|l|l|l|l|l|l|l|l}
+\cline{1-7}
+Class &  MLC  &  MLC  &  MLC & SLC &  SLC & SLC \\ \cline{1-7}
+Metric Type  & Precision &  Recall & F1 & Precision@1 & Recall@1 & F1@1 \\ \cline{1-7}
+Macro-Average &	0.35	&	0.23	&	0.27	&	0.23	&	0.21	&	0.21 \\ \cline{1-7}
+Micro-Average &	0.69	&	0.47	&	0.55	&	0.30	&	0.30	&	0.30 \\ \cline{1-7}
+Example      &	0.58	&	0.46	&	0.51  \\ \cline{1-4}
+\end{tabular}
+\caption{Example/Micro/Macro Average Label Based Metrics for VGG16(SpatialVoc2k)}
+The results in Table 6 do not include the following labels:=\{ par dela(beyond), le long de(along)\} as they have achieved a result of 0 for all metrics. These results show the averages of 10 VGG16 models Fine-Tuned using the SpatialVoc2k dataset as MLC and SLC problems. The Example based metric as seen in the MLC problem is not included for the SLC problem as it produces equivalent results to that of the Micro-Average Metric. The results shown for @1 mean only the top 1 predicted labels are compared to the ground truth.
+\vspace{-4mm}
+\end{table}
 
 \subsubsection{Feed Forward Evaluation Results}
+In this section the results for the Feed Forward Neural Networks are presented trained on the SpatialVoc2k dataset as MLC and SLC problems.
 
+\begin{table}[!htbp]
+\centering
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|l}
+\cline{1-8}
+Class & Class & MLC  &  MLC  &  MLC & SLC &  SLC & SLC \\ \cline{1-8}
+French & English & Precision &  Recall    & F1 & Precision@1 & Recall@1 & F1@1 \\ \cline{1-8}
+a cote de	&	next to	&	0.64	&	0.57	&	0.60	&	0.25	&	0.11	&	0.14 \\ \cline{1-8} 
+a l'exterieur de	&	outside	&	0.00	&	0.00	&	0.00	&	0.10	&	0.07	&	0.07 \\ \cline{1-8}
+au dessus d e	&	beyond	&	0.00	&	0.00	&	0.00	&	0.18	&	0.03	&	0.04 \\ \cline{1-8}
+au niveau de	&	near/at the level of	&	0.62	&	0.39	&	0.47	&	0.24	&	0.02	&	0.04 \\ \cline{1-8}
+autour de	&	around	&	0.00	&	0.00	&	0.00	&	0.58	&	0.44	&	0.44 \\ \cline{1-8}
+contre	&	against	&	0.51	&	0.25	&	0.33	&	0.24	&	0.10	&	0.14 \\ \cline{1-8}
+dans	&	in/into	&	0.17	&	0.03	&	0.04	&	0.49	&	0.33	&	0.36 \\ \cline{1-8}
+derriere	&	behind	&	0.71	&	0.41	&	0.52	&	0.35	&	0.37	&	0.35 \\ \cline{1-8}
+devant	&	front/before	&	0.67	&	0.43	&	0.52	&	0.36	&	0.34	&	0.35 \\ \cline{1-8}
+en face de	&	across from	&	0.17	&	0.01	&	0.03	&	0.23	&	0.08	&	0.11 \\ \cline{1-8}
+le long de	&	along/by	&	0.00	&	0.00	&	0.00	&	0.03	&	0.01	&	0.01\\ \cline{1-8} 
+loin de	&	far from	&	0.69	&	0.36	&	0.46	&	0.36	&	0.22	&	0.26\\ \cline{1-8} 
+pres de	&	near/by	&	0.76	&	0.79	&	0.78	&	0.32	&	0.64	&	0.43\\ \cline{1-8}
+sous	&	under/below	&	0.78	&	0.65	&	0.70	&	0.50	&	0.66	&	0.57\\ \cline{1-8}
+sur	&	on	&	0.79	&	0.75	&	0.76	&	0.48	&	0.73	&	0.58  \\ \cline{1-8}
+\end{tabular}
+\caption{Feed Forward NN(SpatialVoc2k) results for MLC and SLC}
+\centering
+\begin{tabular}{|l|l|l|l|l|l|l|l|l}
+\cline{1-7}
+Class &  MLC  &  MLC  &  MLC & SLC &  SLC & SLC \\ \cline{1-7}
+Metric Type  & Precision &  Recall & F1 & Precision@1 & Recall@1 & F1@1 \\ \cline{1-7}
+Macro-Average &	0.38	&	0.27	&	0.31	&	0.29	&	0.25	&	0.23\\ \cline{1-7}
+Micro-Average &	0.70	&	0.51	&	0.59	&	0.34	&	0.34	&	0.34 \\ \cline{1-7}
+Example       &	0.64	&	0.52	&	0.57 \\ \cline{1-4}
+\end{tabular}
+\caption{Example/Micro/Macro Average Label Based Metrics for Feed Forward NN(SpatialVoc2k)}
+The results in Table 10 does not include the following label:=\{ aucun(none)\} as it has achieved a result of 0 for all metrics. These results show the averages of 10 Feed Forward NN models trained using the SpatialVoc2k dataset as MLC and SLC problems. The Example based metric as seen in the MLC problem is not included for the SLC problem as it produces equivalent results to that of the Micro-Average Metric. The results shown for @1 mean only the top 1 predicted labels are compared to the ground truth.
+\vspace{-4mm}
+\end{table}
+
+
+\newpage
 \subsubsection{Activation Maximization Evaluation Results}
+
+\begin{figure}[!htbp]
+	\includegraphics[scale=0.60,center]{Spatial_act.pdf}
+	\caption{Activation Maximization on VGG16(SpatialVoc2k) Classes for MLC and SLC}
+\end{figure}
+
+\section{Analysis of Results}
+\subsection{Preamble}
+In this chapter the results obtained in Chapter 3 are discussed. This chapter is split into three parts,-Section 5.2 analyses and compares the MLC vs SLC problems, VGG16 vs NN and the Activation Maps for the VRD dataset. -Section 5.3 tackles the same results and problems but for the SpatialVoc2k dataset instead.
+
+\subsection{VRD Results}
+In this section the results obtained by the VRD dataset will be discussed and compared across models and training methods.
+
+\subsubsection{Multi-label vs Single-label Classification}
+The VGG16 Single-Label Classification training method outperformed the Multi-Label Classification training method for all per-predicate accounts of Recall and F1. The MLC Precision metric recorded better results for labels:=\{ above, behind, below, in, next, on, under\} compared to that of SLC. The Macro-Average, meaning the average of all the predicates combined achieved equal results for precision and higher results in Recall/F1 for the SLC method. This means that even though the MLC training method returned less predicate results the ones it did return had been more relevant compared to that of the SLC. SLC had higher or equal Recall for all predicates compared to MLC meaning that most of the relevant labels had been retrieved for SLC compared to that of MLC. SLC has more predicate results due to the difference in metrics, MLC metrics have a threshold of 50\% which filter out low probability labels, while SLC uses @1 so low probability labels can be retrieved as long as they are the highest among the predicted. 
+\\
+The Feed Forward Neural Network had a greater MLC precision score than that of the SLC for all accounts of per-predicate labels while SLC had better results for recall. Even though SLC produced higher recall for all predicates the results aren't far off from MLC, the greater difference is in the precision scores. SLCs Micro-Average score shows 51\% for all metrics while MLC's Micro-Average score shows Precision: 63\%, Recall: 47\%, F1: 54\%. The difference in Micro-Average Precision made the MLC method outperform in F1 score over the SLC method.
+\\
+The MLC method proved to be more precise than the SLC while SLC was more sensitive and had recalled the most relevant labels.
+
+\subsubsection{VGG16 vs Feed Forward Neural Network}
+The Feed Forward Neural Network trained on the Geometric Features achieved better results than the Fine-Tuned VGG16 CNN trained on spatial masks. The geometric features didn't only contain spatial configurations of the bounding boxes but also the subject/object categories which the spatial masks couldn't possibly learn. These language features that have been combined with the geometric features are the main reason that the Feed Forward Network outperforms the VGG16. Language features allow for more ambiguous predicates to be predicted as these predicates would be indistinguishable as spatial masks or geometric features alone but would have a very distinct occurance between a pair of object categories. To show the importance of the language features in the appendix there are results of the Feed Forward Neural Network trained using only Geometric Features meaning that the subject/object categories have been removed. These results show a lower performance in all metrics than that of a Fine-Tuned VGG16 for both MLC and SLC. They also show that SLC has a higher F1 score than MLC which is the opposite of what was shown in the networks trained with both Language and Geometric features.
+\\
+The results achieved by the Feed Forward Neural Network using Geometric and Language Features outperform VGG16 for all metrics. For real life implementation I would suggest using CNN's for object detection and localization from there extract the Geometric and Language features from the pair of objects and train a Feed Forward Neural Network. The Feed Forward Neural Network takes less time to train and produces better results. To improve these results word2vec from Lu et al(2016) should be used on the language features instead of One Hot Encoding, this would enable for even faster training as you won't have a large input shape for all the possible object categories and increased results on unseen category combinations.
+
+\subsubsection{Activation Maximization}
+The Activation Maps show what the CNN is looking for, for that specific output class. Knowing that the subject is Green and object is Blue we can interpret these maps. The predicates Above,Over have similar activation maps while Top has a less clear version of those maps. These maps show that Green is Above/Over/Top the Blue colour which is a good indicator of how the network perceives these spatial relations. The below and under activation maps show the Green colour below/under the Blue colour which is a straight forward indicator. Left and Right also have quite clear activation maps that are easily understandable. The predicate "In" is shown to be a mix of $[0,255,255]$ pixels surrounded by an outline of Blue pixels indicating that the Green subject is inside the Blue object. "On" has multiple small concentrations  of Green points above small concentrations of $[0,255,255]$ followed by Blue points, this indicates that the predicate "On" has a Green subject constantly in contact with the Blue object while being in a higher position over it at the same time. While "above/over/top" predicates have the concentration of Green confined to the upper limits of the activation map "On" has them more spread out. The MLC activations produced similar looking maps to that of the SLC activations but they are less clear.
+
+
+\subsubsection{Conclusions}
+These results dictate that even though the Visual Relationship Detection problem should be taken as a Multi-Label Classification problem the label distributions in the datasets play a large role in how well the model will be able to recognise multiple relationships. Training a model which is heavily composed of single labels(VRD) as a Multi-Label model hinders the models ability to predict labels correctly.
+\\
+The Feed Forward Neural Network outperforms the CNN mainly due to the Language Features otherwise having only Geometric Features produce lower scores than the CNN. Language features also greatly close the gap in results between MLC and SLC for the VRD dataset. 
+
+\subsection{SpatialVoc2k Results}
+In this section the results obtained by the SpatialVoc2k dataset will be discussed and compared across models and training methods
+
+\subsubsection{Multi-label vs Single-label Classification}
+SpatialVoc2k is mainly a multi-label model and it proves that in MLC's results compared to that of the SLC training method.The VGG16 MLC models scores higher for all the evaluation metrics in the Macro and Micro-averages. All the non-zero per-predicate results returned by the MLC model had higher score than that of SLC except for the predicate "far from" which had a higher recall for SLC method. The zero per predicate results returned by the MLC don't necessarily show that the MLC model doesn't detect them but that their probabilities weren't high enough to be considered as correct. The SLC method has noteably higher results on the predicates "around/into" compared to the zero results retrieved by MLC, this can be explained further by looking at the activation maps.
+\\
+NOTES Feed Forward Neural Network exhibits the same MLC vs SLC properties as VGG16
+\subsubsection{VGG16 vs Feed Forward Neural Network}
+NOTES Feed Forward Neural Network outperforms the VGG16 in all aspects largely due to the language features
+NOTES Geometric Features alone performed worse than the VGG16 fine-tuned for all metrics and accounts.
+\subsubsection{Activation Maximization}
+NOTES MLC has clearer maps than SLC except on "Around" and "In" where SLC has had higher
+metric scores shows how activation maximization can be used to understand these neural networks
+ 
+\subsubsection{Conclusions}
 
 
 \section*{Acknowledgements.}
 I would like to thank and express my special gratitude to my supervisor Dr. Adrian Muscat for assisting me and guiding me throughout this final year project .
 
-
+\section{References}
+TO DO ADD REFERENCES 
+Add a terminology page with regards to training epoch/loss/optimizers 
+Add paragraph about SmallVGG 
+Add appendix with SmallVGG results together with Geometric Only Results without language features.
+Literature Review of Activation Maximization
 \end{document}
