@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.4.25)  20 MAY 2019 11:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.4.25)  23 MAY 2019 05:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -197,18 +197,18 @@ Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 (./main - Report.aux)
 \openout1 = `"main - Report.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -254,20 +254,11 @@ Package caption Info: End \AtBeginDocument code.
 <UOMcrest1.pdf, id=1, 225.84375pt x 225.84375pt>
 File: UOMcrest1.pdf Graphic file (type pdf)
 <use UOMcrest1.pdf>
-Package pdftex.def Info: UOMcrest1.pdf  used on input line 24.
+Package pdftex.def Info: UOMcrest1.pdf  used on input line 22.
 (pdftex.def)             Requested size: 225.84319pt x 225.84319pt.
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./UOMcrest1.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 24--24
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 24--24
-
- []
-
 [2] (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count101
@@ -342,7 +333,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 4.
  [1
 
-])
+] [2])
 \tf@toc=\write3
 \openout3 = `"main - Report.toc"'.
 
@@ -359,18 +350,11 @@ Missing character: There is no ™ in font cmr12!
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ™ in font cmr12!
- [2]
-Underfull \vbox (badness 1796) has occurred while \output is active []
-
- [3]
-Underfull \vbox (badness 1852) has occurred while \output is active []
-
- [4]
+ [2] [3] [4]
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ™ in font cmr12!
-
-[5]
+ [5]
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ™ in font cmr12!
@@ -380,12 +364,12 @@ Missing character: There is no ™ in font cmr12!
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ™ in font cmr12!
-<VGG16Blocks.pdf, id=34, 853.1875pt x 460.72125pt>
+<VGG16Blocks.pdf, id=37, 853.1875pt x 460.72125pt>
 File: VGG16Blocks.pdf Graphic file (type pdf)
 <use VGG16Blocks.pdf>
-Package pdftex.def Info: VGG16Blocks.pdf  used on input line 94.
+Package pdftex.def Info: VGG16Blocks.pdf  used on input line 95.
 (pdftex.def)             Requested size: 426.59271pt x 230.36006pt.
- [6]
+ [6] [7 <./VGG16Blocks.pdf>]
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ™ in font cmr12!
@@ -395,17 +379,11 @@ Missing character: There is no ™ in font cmr12!
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ™ in font cmr12!
- [7 <./VGG16Blocks.pdf>]
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ™ in font cmr12!
- [8] [9]
-Missing character: There is no â in font cmr12!
-Missing character: There is no € in font cmr12!
-Missing character: There is no ™ in font cmr12!
-Missing character: There is no â in font cmr12!
-Missing character: There is no € in font cmr12!
-Missing character: There is no ™ in font cmr12!
+
+[8] [9]
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ™ in font cmr12!
@@ -419,18 +397,26 @@ Missing character: There is no ™ in font cmr12!
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ™ in font cmr12!
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no ™ in font cmr12!
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [11]
-<SV2k.pdf, id=57, 429.605pt x 343.2825pt>
+<SV2k.pdf, id=60, 429.605pt x 343.2825pt>
 File: SV2k.pdf Graphic file (type pdf)
 <use SV2k.pdf>
-Package pdftex.def Info: SV2k.pdf  used on input line 158.
+Package pdftex.def Info: SV2k.pdf  used on input line 159.
 (pdftex.def)             Requested size: 257.76498pt x 205.97107pt.
-<VRD_Labels.pdf, id=58, 436.63126pt x 304.13625pt>
+
+[12 <./SV2k.pdf>]
+<VRD_Labels.pdf, id=65, 436.63126pt x 304.13625pt>
 File: VRD_Labels.pdf Graphic file (type pdf)
 <use VRD_Labels.pdf>
-Package pdftex.def Info: VRD_Labels.pdf  used on input line 167.
+Package pdftex.def Info: VRD_Labels.pdf  used on input line 168.
 (pdftex.def)             Requested size: 261.98077pt x 182.48315pt.
- [12 <./SV2k.pdf>] [13 <./VRD_Labels.pdf>]
+ [13 <./VRD_Labels.pdf>]
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ¢ in font cmr12!
@@ -444,26 +430,29 @@ Missing character: There is no ™ in font cmr12!
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ™ in font cmr12!
+
+Underfull \vbox (badness 2012) has occurred while \output is active []
+
  [15]
-Overfull \hbox (26.28244pt too wide) in paragraph at lines 235--252
+Overfull \hbox (26.28244pt too wide) in paragraph at lines 236--253
  [][] 
  []
 
 [16]
-<originalImage.pdf, id=79, 803.0pt x 602.25pt>
+<originalImage.pdf, id=82, 803.0pt x 602.25pt>
 File: originalImage.pdf Graphic file (type pdf)
 <use originalImage.pdf>
-Package pdftex.def Info: originalImage.pdf  used on input line 263.
+Package pdftex.def Info: originalImage.pdf  used on input line 264.
 (pdftex.def)             Requested size: 200.74951pt x 150.56212pt.
-<UnionBox.pdf, id=80, 560.0925pt x 296.10625pt>
+<UnionBox.pdf, id=83, 560.0925pt x 296.10625pt>
 File: UnionBox.pdf Graphic file (type pdf)
 <use UnionBox.pdf>
-Package pdftex.def Info: UnionBox.pdf  used on input line 269.
+Package pdftex.def Info: UnionBox.pdf  used on input line 270.
 (pdftex.def)             Requested size: 196.03531pt x 103.63873pt.
-<UnionWBB.pdf, id=81, 560.0925pt x 300.12125pt>
+<UnionWBB.pdf, id=84, 560.0925pt x 300.12125pt>
 File: UnionWBB.pdf Graphic file (type pdf)
 <use UnionWBB.pdf>
-Package pdftex.def Info: UnionWBB.pdf  used on input line 275.
+Package pdftex.def Info: UnionWBB.pdf  used on input line 276.
 (pdftex.def)             Requested size: 196.03531pt x 105.044pt.
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
@@ -474,84 +463,139 @@ Missing character: There is no ™ in font cmr12!
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ™ in font cmr12!
- [17 <./originalImage.pdf> <./UnionBox.pdf>] [18 <./UnionWBB.pdf>]
+ [17 <./originalImage.pdf>] [18 <./UnionBox.pdf> <./UnionWBB.pdf>]
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ™ in font cmr12!
+
+Underfull \vbox (badness 1303) has occurred while \output is active []
+
  [19]
-<TPFP.pdf, id=91, 799.98875pt x 291.0875pt>
+<TPFP.pdf, id=94, 799.98875pt x 291.0875pt>
 File: TPFP.pdf Graphic file (type pdf)
 <use TPFP.pdf>
-Package pdftex.def Info: TPFP.pdf  used on input line 301.
+Package pdftex.def Info: TPFP.pdf  used on input line 302.
 (pdftex.def)             Requested size: 280.00026pt x 101.88214pt.
 
-[20 <./TPFP.pdf (PNG copy)>]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 351.
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
+ [20 <./TPFP.pdf (PNG copy)>] [21]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 352.
 
-(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 351.
- [21] [22]
-<VRD_act.pdf, id=102, 728.7225pt x 786.94pt>
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 352.
+ [22] [23]
+<VRD_act.pdf, id=108, 728.7225pt x 786.94pt>
 File: VRD_act.pdf Graphic file (type pdf)
 <use VRD_act.pdf>
-Package pdftex.def Info: VRD_act.pdf  used on input line 400.
+Package pdftex.def Info: VRD_act.pdf  used on input line 401.
 (pdftex.def)             Requested size: 437.23688pt x 472.16765pt.
-
-Overfull \hbox (52.9108pt too wide) in paragraph at lines 411--431
+<NewVRD.pdf, id=109, 681.54625pt x 516.93124pt>
+File: NewVRD.pdf Graphic file (type pdf)
+<use NewVRD.pdf>
+Package pdftex.def Info: NewVRD.pdf  used on input line 407.
+(pdftex.def)             Requested size: 408.93091pt x 310.16113pt.
+ [24 <./VRD_act.pdf>] [25 <./NewVRD.pdf>]
+Overfull \hbox (52.9108pt too wide) in paragraph at lines 418--438
  [][] 
  []
 
-[23] [24 <./VRD_act.pdf>]
-Overfull \hbox (52.9108pt too wide) in paragraph at lines 451--471
+
+Overfull \hbox (52.9108pt too wide) in paragraph at lines 458--478
  [][] 
  []
 
 
-Underfull \hbox (badness 1577) in paragraph at lines 481--481
+Underfull \hbox (badness 1577) in paragraph at lines 488--488
 []\OT1/cmr/m/n/12 Table 9: |Ex-am-ple/Micro/Macro Av-er-age La-bel Based Met-ri
 cs for Feed For-ward
  []
 
-[25] [26]
-<Spatial_act.pdf, id=115, 762.85pt x 749.80125pt>
+
+Underfull \vbox (badness 2547) has occurred while \output is active []
+
+ [26]
+[27]
+<Spatial_act.pdf, id=123, 762.85pt x 749.80125pt>
 File: Spatial_act.pdf Graphic file (type pdf)
 <use Spatial_act.pdf>
-Package pdftex.def Info: Spatial_act.pdf  used on input line 491.
+Package pdftex.def Info: Spatial_act.pdf  used on input line 496.
 (pdftex.def)             Requested size: 457.71353pt x 449.88422pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [27 <./Spatial_act.pdf>] [28] [29] [30]
-Overfull \hbox (50.03928pt too wide) in paragraph at lines 544--549
-\OT1/cmr/m/n/12 TO DO ADD REF-ER-ENCES Add a ter-mi-nol-ogy page with re-gards 
-to train-ing epoch/loss/optimizers
+<VGG16_Spatial2.pdf, id=124, 726.715pt x 567.11874pt>
+File: VGG16_Spatial2.pdf Graphic file (type pdf)
+<use VGG16_Spatial2.pdf>
+Package pdftex.def Info: VGG16_Spatial2.pdf  used on input line 500.
+(pdftex.def)             Requested size: 436.03235pt x 340.27386pt.
+ [28 <./Spatial_act.pdf>] [29 <./VGG16_Spatial2.pdf>] [30] [31] [32]
+[33] [34] (./main - Report.bbl [35]) [36] [37] [38]
+<SmallVGG_VRD.pdf, id=159, 757.83125pt x 773.89125pt>
+File: SmallVGG_VRD.pdf Graphic file (type pdf)
+<use SmallVGG_VRD.pdf>
+Package pdftex.def Info: SmallVGG_VRD.pdf  used on input line 649.
+(pdftex.def)             Requested size: 454.70226pt x 464.33833pt.
+<Small_VRD_2.pdf, id=160, 750.805pt x 495.8525pt>
+File: Small_VRD_2.pdf Graphic file (type pdf)
+<use Small_VRD_2.pdf>
+Package pdftex.def Info: Small_VRD_2.pdf  used on input line 654.
+(pdftex.def)             Requested size: 450.48647pt x 297.5138pt.
+ [39 <./SmallVGG_VRD.pdf>]
+[40 <./Small_VRD_2.pdf>]
+Overfull \hbox (52.9108pt too wide) in paragraph at lines 667--689
+ [][] 
  []
 
-[31] (./main - Report.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 699--699
+[]\OT1/cmr/m/n/12 Table 15: |Ex-am-ple/Micro/Macro Av-er-age La-bel Based Met-r
+ics for Smal-l-
+ []
+
+[41]
+Overfull \hbox (52.9108pt too wide) in paragraph at lines 709--731
+ [][] 
+ []
+
+
+Underfull \hbox (badness 1077) in paragraph at lines 741--741
+[]\OT1/cmr/m/n/12 Table 17: |Ex-am-ple/Micro/Macro Av-er-age La-bel Based Met-r
+ics for Feed For-ward
+ []
+
+<Small_Spatial.pdf, id=171, 767.86874pt x 763.85374pt>
+File: Small_Spatial.pdf Graphic file (type pdf)
+<use Small_Spatial.pdf>
+Package pdftex.def Info: Small_Spatial.pdf  used on input line 748.
+(pdftex.def)             Requested size: 460.7248pt x 458.31578pt.
+<Small_Spatial_2.pdf, id=172, 737.75626pt x 655.44875pt>
+File: Small_Spatial_2.pdf Graphic file (type pdf)
+<use Small_Spatial_2.pdf>
+Package pdftex.def Info: Small_Spatial_2.pdf  used on input line 753.
+(pdftex.def)             Requested size: 442.65717pt x 393.27228pt.
+[42] [43 <./Small_Spatial.pdf>] [44 <./Small_Spatial_2.pdf>]
+(./main - Report.aux) ) 
 Here is how much of TeX's memory you used:
- 4540 strings out of 492982
- 70455 string characters out of 6134896
- 167783 words of memory out of 5000000
- 8017 multiletter control sequences out of 15000+600000
+ 4586 strings out of 492982
+ 71428 string characters out of 6134896
+ 169182 words of memory out of 5000000
+ 8054 multiletter control sequences out of 15000+600000
  8548 words of font info for 30 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 43i,9n,77p,1738b,409s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on "main - Report.pdf" (34 pages, 2605294 bytes).
+ 43i,9n,77p,1835b,409s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on "main - Report.pdf" (48 pages, 6660111 bytes).
 PDF statistics:
- 159 PDF objects out of 1000 (max. 8388607)
- 100 compressed objects within 1 object stream
+ 212 PDF objects out of 1000 (max. 8388607)
+ 132 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 81 words of extra memory for PDF output out of 10000 (max. 10000000)
 

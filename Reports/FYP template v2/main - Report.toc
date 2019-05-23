@@ -18,44 +18,55 @@
 \contentsline {subsubsection}{\numberline {2.3.2}Visual Relationship Detection with Language Priors}{8}
 \contentsline {subsubsection}{\numberline {2.3.3}Detecting Visual Relationships with Deep Relational Networks}{9}
 \contentsline {subsubsection}{\numberline {2.3.4}A Study on the Detection of Visual Relationships}{10}
-\contentsline {subsection}{\numberline {2.4}Datasets}{11}
-\contentsline {subsubsection}{\numberline {2.4.1}SpatialVOC2K: A Multilingual Dataset of Images with Annotations and Features for Spatial Relations between Objects}{11}
+\contentsline {subsection}{\numberline {2.4}Datasets}{12}
+\contentsline {subsubsection}{\numberline {2.4.1}SpatialVOC2K: A Multilingual Dataset of Images with Annotations and Features for Spatial Relations between Objects}{12}
 \contentsline {subsubsection}{\numberline {2.4.2}Stanford VRD}{12}
-\contentsline {subsection}{\numberline {2.5}A Review on Multi-Label Learning Algorithms}{12}
+\contentsline {subsection}{\numberline {2.5}A Review on Multi-Label Learning Algorithms}{13}
 \contentsline {subsection}{\numberline {2.6}Activation Maximization}{14}
-\contentsline {section}{\numberline {3}Methodology}{14}
+\contentsline {section}{\numberline {3}Methodology}{15}
 \contentsline {subsection}{\numberline {3.1}Data Preparation}{15}
 \contentsline {subsubsection}{\numberline {3.1.1}Stanford VRD Dataset}{15}
-\contentsline {subsubsection}{\numberline {3.1.2}SpatialVoc2k Dataset}{15}
+\contentsline {subsubsection}{\numberline {3.1.2}SpatialVoc2k Dataset}{16}
 \contentsline {subsubsection}{\numberline {3.1.3}Geometric Datasets}{16}
-\contentsline {subsubsection}{\numberline {3.1.4}Single Label Datasets}{16}
+\contentsline {subsubsection}{\numberline {3.1.4}Single Label Datasets}{17}
 \contentsline {subsection}{\numberline {3.2}Image Preparation}{17}
 \contentsline {subsection}{\numberline {3.3}Training}{18}
 \contentsline {subsubsection}{\numberline {3.3.1}VGG16}{18}
 \contentsline {subsubsection}{\numberline {3.3.2}Feed Forward Neural Network}{19}
 \contentsline {subsubsection}{\numberline {3.3.3}Data Generators}{19}
-\contentsline {subsection}{\numberline {3.4}Evaluation and Metrics}{19}
-\contentsline {subsection}{\numberline {3.5}Interpreting the models}{20}
+\contentsline {subsection}{\numberline {3.4}Evaluation and Metrics}{20}
+\contentsline {subsection}{\numberline {3.5}Interpreting the models}{21}
 \contentsline {section}{\numberline {4}Findings}{21}
 \contentsline {subsection}{\numberline {4.1}Preamble}{21}
 \contentsline {subsection}{\numberline {4.2}VRD Dataset Evaluation Results}{21}
 \contentsline {subsubsection}{\numberline {4.2.1}VGG16 Evaluation Results}{21}
-\contentsline {subsubsection}{\numberline {4.2.2}Feed Forward Evaluation Results}{23}
+\contentsline {subsubsection}{\numberline {4.2.2}Feed Forward Evaluation Results}{22}
 \contentsline {subsubsection}{\numberline {4.2.3}Activation Maximization Evaluation Results}{23}
-\contentsline {subsection}{\numberline {4.3}SpatialVoc2k Dataset Evaluation Results}{23}
-\contentsline {subsubsection}{\numberline {4.3.1}VGG16 Evaluation Results}{25}
-\contentsline {subsubsection}{\numberline {4.3.2}Feed Forward Evaluation Results}{25}
+\contentsline {subsection}{\numberline {4.3}SpatialVoc2k Dataset Evaluation Results}{26}
+\contentsline {subsubsection}{\numberline {4.3.1}VGG16 Evaluation Results}{26}
+\contentsline {subsubsection}{\numberline {4.3.2}Feed Forward Evaluation Results}{27}
 \contentsline {subsubsection}{\numberline {4.3.3}Activation Maximization Evaluation Results}{27}
 \contentsline {section}{\numberline {5}Analysis of Results}{28}
 \contentsline {subsection}{\numberline {5.1}Preamble}{28}
-\contentsline {subsection}{\numberline {5.2}VRD Results}{28}
-\contentsline {subsubsection}{\numberline {5.2.1}Multi-label vs Single-label Classification}{28}
-\contentsline {subsubsection}{\numberline {5.2.2}VGG16 vs Feed Forward Neural Network}{29}
-\contentsline {subsubsection}{\numberline {5.2.3}Activation Maximization}{29}
-\contentsline {subsubsection}{\numberline {5.2.4}Conclusions}{30}
-\contentsline {subsection}{\numberline {5.3}SpatialVoc2k Results}{30}
-\contentsline {subsubsection}{\numberline {5.3.1}Multi-label vs Single-label Classification}{30}
-\contentsline {subsubsection}{\numberline {5.3.2}VGG16 vs Feed Forward Neural Network}{31}
-\contentsline {subsubsection}{\numberline {5.3.3}Activation Maximization}{31}
-\contentsline {subsubsection}{\numberline {5.3.4}Conclusions}{31}
-\contentsline {section}{\numberline {6}References}{31}
+\contentsline {subsection}{\numberline {5.2}VRD Results}{30}
+\contentsline {subsubsection}{\numberline {5.2.1}Multi-label vs Single-label Classification}{30}
+\contentsline {subsubsection}{\numberline {5.2.2}VGG16 vs Feed Forward Neural Network}{30}
+\contentsline {subsubsection}{\numberline {5.2.3}Activation Maximization}{31}
+\contentsline {subsubsection}{\numberline {5.2.4}Conclusions}{32}
+\contentsline {subsection}{\numberline {5.3}SpatialVoc2k Results}{32}
+\contentsline {subsubsection}{\numberline {5.3.1}Multi-label vs Single-label Classification}{32}
+\contentsline {subsubsection}{\numberline {5.3.2}VGG16 vs Feed Forward Neural Network}{33}
+\contentsline {subsubsection}{\numberline {5.3.3}Activation Maximization}{33}
+\contentsline {subsubsection}{\numberline {5.3.4}Conclusions}{33}
+\contentsline {subsection}{\numberline {5.4}Conclusion}{33}
+\contentsline {subsubsection}{\numberline {5.4.1}Future Work}{34}
+\contentsline {section}{\numberline {6}References}{35}
+\contentsline {section}{\numberline {7}Appendices}{37}
+\contentsline {subsection}{\numberline {7.1}VRD}{37}
+\contentsline {subsubsection}{\numberline {7.1.1}SmallVGG}{37}
+\contentsline {subsubsection}{\numberline {7.1.2}Feed Forward Neural Network}{38}
+\contentsline {subsubsection}{\numberline {7.1.3}SmallVGG Activation Maximization}{39}
+\contentsline {subsection}{\numberline {7.2}SpatialVoc2k}{41}
+\contentsline {subsubsection}{\numberline {7.2.1}SmallVGG}{41}
+\contentsline {subsubsection}{\numberline {7.2.2}Feed Forward Neural Network}{42}
+\contentsline {subsubsection}{\numberline {7.2.3}SmallVGG Activation Maximization}{42}
