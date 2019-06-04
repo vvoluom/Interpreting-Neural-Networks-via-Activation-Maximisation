@@ -1,0 +1,30 @@
+\ifglsentryexists{ngml}{}%
+{%
+\gls@defglossaryentry{ngml}%
+{%
+name={$\eta $g/mL},%
+sort={$\eta $g/mL},%
+type={main},%
+first={nanogram per millilitre\glsspace ($\eta $g/mL)},%
+firstplural={nanogram per millilitre\acrpluralsuffix \glsspace ($\eta $g/mL\acrpluralsuffix )},%
+text={$\eta $g/mL},%
+plural={$\eta $g/mL\acrpluralsuffix },%
+description={nanogram per millilitre},%
+descriptionplural={nanogram per millilitre\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={nanogram per millilitre},%
+longplural={nanogram per millilitres},%
+short={$\eta $g/mL},%
+shortplural={$\eta $g/mLs},%
+counter={page},%
+parent={},%
+%
+}%
+}%

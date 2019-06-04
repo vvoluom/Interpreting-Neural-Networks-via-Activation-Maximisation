@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{belz-etal-2018-spatialvoc2k}
 Anja Belz, Adrian Muscat, Pierre Anguill, Mouhamadou Sow, Gaetan Vincent, and
@@ -31,6 +31,12 @@ Cewu Lu, Ranjay Krishna, Michael Bernstein, and Li~Fei-Fei.
 Noel Mizzi.
 \newblock A study on the detection of visual relationships.
 \newblock 2018.
+
+\bibitem{AM}
+Zhuwei Qin, Fuxun Yu, Chenchen Liu, and Xiang Chen.
+\newblock How convolutional neural network see the world - {A} survey of
+  convolutional neural network visualization methods.
+\newblock {\em CoRR}, abs/1804.11191, 2018.
 
 \bibitem{NIPS2015_5638}
 Shaoqing Ren, Kaiming He, Ross Girshick, and Jian Sun.

@@ -1,0 +1,16 @@
+\babel@toc {english}{}
+\contentsline {figure}{\numberline {1}{\ignorespaces Architecture of VGG16\relax }}{7}
+\contentsline {figure}{\numberline {2}{\ignorespaces Class distribution SpatialVoc2k\relax }}{12}
+\contentsline {figure}{\numberline {3}{\ignorespaces VRD Distribution of Classes\relax }}{13}
+\contentsline {figure}{\numberline {4}{\ignorespaces Image from VRD dataset\relax }}{17}
+\contentsline {figure}{\numberline {5}{\ignorespaces Union Box of $<Laptop, Left-of , Bottle>$\relax }}{18}
+\contentsline {figure}{\numberline {6}{\ignorespaces Union-WB-B of $<Laptop, Left-of , Bottle>$\relax }}{18}
+\contentsline {figure}{\numberline {7}{\ignorespaces Contingency table of Ground Truth vs Predicted Values \relax }}{21}
+\contentsline {figure}{\numberline {8}{\ignorespaces Activation Maximization on VGG16(VRD) Classes for MLC and SLC\relax }}{24}
+\contentsline {figure}{\numberline {9}{\ignorespaces Activation Maximization on VGG16(VRD) Classes for MLC and SLC\relax }}{25}
+\contentsline {figure}{\numberline {10}{\ignorespaces Activation Maximization on VGG16(SpatialVoc2k) Classes for MLC and SLC\relax }}{28}
+\contentsline {figure}{\numberline {11}{\ignorespaces Activation Maximization on VGG16(VRD) Classes for MLC and SLC\relax }}{29}
+\contentsline {figure}{\numberline {12}{\ignorespaces SmallVGG Activation Maps\relax }}{37}
+\contentsline {figure}{\numberline {13}{\ignorespaces SmallVGG Activation Maps\relax }}{38}
+\contentsline {figure}{\numberline {14}{\ignorespaces SmallVGG Activation Maps\relax }}{41}
+\contentsline {figure}{\numberline {15}{\ignorespaces SmallVGG Activation Maps\relax }}{42}

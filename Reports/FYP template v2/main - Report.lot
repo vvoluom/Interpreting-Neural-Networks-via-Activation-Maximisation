@@ -1,0 +1,18 @@
+\babel@toc {english}{}
+\contentsline {table}{\numberline {1}{\ignorespaces Geometric Features\relax }}{16}
+\contentsline {table}{\numberline {2}{\ignorespaces VGG16(VRD) results for MLC and SLC\relax }}{22}
+\contentsline {table}{\numberline {3}{\ignorespaces Example/Micro/Macro Average Label Based Metrics for VGG16(VRD)\relax }}{22}
+\contentsline {table}{\numberline {4}{\ignorespaces Feed Forward NN(VRD) results for MLC and SLC\relax }}{23}
+\contentsline {table}{\numberline {5}{\ignorespaces Example/Micro/Macro Average Label Based Metrics for Feed Forward NN(VRD)\relax }}{23}
+\contentsline {table}{\numberline {6}{\ignorespaces VGG16(SpatialVoc2k) results for MLC and SLC\relax }}{26}
+\contentsline {table}{\numberline {7}{\ignorespaces Example/Micro/Macro Average Label Based Metrics for VGG16(SpatialVoc2k)\relax }}{26}
+\contentsline {table}{\numberline {8}{\ignorespaces Feed Forward NN(SpatialVoc2k) results for MLC and SLC\relax }}{27}
+\contentsline {table}{\numberline {9}{\ignorespaces Example/Micro/Macro Average Label Based Metrics for Feed Forward NN(SpatialVoc2k)\relax }}{27}
+\contentsline {table}{\numberline {10}{\ignorespaces SmallVGG(VRD) results for MLC and SLC\relax }}{35}
+\contentsline {table}{\numberline {11}{\ignorespaces Example/Micro/Macro Average Label Based Metrics for SmallVGG(VRD)\relax }}{35}
+\contentsline {table}{\numberline {12}{\ignorespaces Feed Forward(VRD) results for MLC and SLC\relax }}{36}
+\contentsline {table}{\numberline {13}{\ignorespaces Example/Micro/Macro Average Label Based Metrics for Feed Forward(VRD)\relax }}{36}
+\contentsline {table}{\numberline {14}{\ignorespaces SmallVGG(SpatialVoc2k) results for MLC and SLC\relax }}{39}
+\contentsline {table}{\numberline {15}{\ignorespaces Example/Micro/Macro Average Label Based Metrics for SmallVGG(SpatialVoc2k)\relax }}{39}
+\contentsline {table}{\numberline {16}{\ignorespaces Feed Forward NN(SpatialVoc2k) results for MLC and SLC\relax }}{40}
+\contentsline {table}{\numberline {17}{\ignorespaces Example/Micro/Macro Average Label Based Metrics for Feed Forward NN(SpatialVoc2k)\relax }}{40}

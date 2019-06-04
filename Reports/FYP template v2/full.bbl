@@ -1,0 +1,45 @@
+\begin{thebibliography}{1}
+
+\bibitem{belz-etal-2018-spatialvoc2k}
+Anja Belz, Adrian Muscat, Pierre Anguill, Mouhamadou Sow, Gaetan Vincent, and
+  Yassine Zinessabah.
+\newblock {S}patial{VOC}2{K}: A multilingual dataset of images with annotations
+  and features for spatial relations between objects.
+\newblock In {\em Proceedings of the 11th International Conference on Natural
+  Language Generation}, pages 140--145, Tilburg University, The Netherlands,
+  November 2018. Association for Computational Linguistics.
+
+\bibitem{Dai2017DetectingVR}
+Bo~Dai, Yuqi Zhang, and Dahua Lin.
+\newblock Detecting visual relationships with deep relational networks.
+\newblock {\em 2017 IEEE Conference on Computer Vision and Pattern Recognition
+  (CVPR)}, pages 3298--3308, 2017.
+
+\bibitem{lu2016visual}
+Cewu Lu, Ranjay Krishna, Michael Bernstein, and Li~Fei-Fei.
+\newblock Visual relationship detection with language priors.
+\newblock In {\em European Conference on Computer Vision}, 2016.
+
+\bibitem{detectionRelationships}
+Noel Mizzi.
+\newblock A study on the detection of visual relationships.
+\newblock 2018.
+
+\bibitem{AM}
+Zhuwei Qin, Fuxun Yu, Chenchen Liu, and Xiang Chen.
+\newblock How convolutional neural network see the world - {A} survey of
+  convolutional neural network visualization methods.
+\newblock {\em CoRR}, abs/1804.11191, 2018.
+
+\bibitem{VisualPhrases}
+Mohammad~Amin Sadeghi and Ali Farhadi.
+\newblock Recognition using visual phrases.
+\newblock 2011.
+
+\bibitem{6471714}
+M.~{Zhang} and Z.~{Zhou}.
+\newblock A review on multi-label learning algorithms.
+\newblock {\em IEEE Transactions on Knowledge and Data Engineering},
+  26(8):1819--1837, Aug 2014.
+
+\end{thebibliography}
